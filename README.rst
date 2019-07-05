@@ -18,15 +18,23 @@ OSC-recorder
 
 Python scripts to capture and replay OSC packets. Built on top of pyliblo.
 
+Documentation: https://osc-recorder.readthedocs.io.
 
-* Free software: MIT license
-* Documentation: https://osc-recorder.readthedocs.io.
+Installation
+------------
+* Download and install liblo_ first
+* Install pyliblo: `pip install pyliblo`
+* If it doesn't work, follow instructions here: pyliblo_
+
+If you want to install from source.
+
+Clone the repo and run `pip install .` from the folder.
 
 
-Features
---------
+.. _liblo: http://liblo.sourceforge.net/
+.. _pyliblo: http://das.nasophon.de/pyliblo/
 
-* TODO
+
 
 Credits
 -------

@@ -79,11 +79,11 @@ Ready to contribute? Here's how to set up `osc_recorder` for local development.
 5. When you're done making changes, check that your changes pass flake8 and the
    tests, including testing other Python versions with tox::
 
-    $ flake8 osc_recorder tests
-    $ python setup.py test or py.test
+    $ pylint ./osc_recorder ./tests
+    $ py.test
     $ tox
 
-   To get flake8 and tox, just pip install them into your virtualenv.
+   To get pylint, pytest and tox, just pip install them into your virtualenv.
 
 6. Commit your changes and push your branch to GitHub::
 
@@ -105,14 +105,6 @@ Before you submit a pull request, check that it meets these guidelines:
 3. The pull request should work for Python 2.7, 3.4, 3.5 and 3.6, and for PyPy. Check
    https://travis-ci.org/oishefarhan/osc_recorder/pull_requests
    and make sure that the tests pass for all supported Python versions.
-
-Tips
-----
-
-To run a subset of tests::
-
-
-    $ python -m unittest tests.test_osc_recorder
 
 Deploying
 ---------

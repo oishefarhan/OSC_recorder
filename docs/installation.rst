@@ -14,7 +14,8 @@ To install OSC-recorder, run this command in your terminal:
 
     $ pip install osc_recorder
 
-This is the preferred method to install OSC-recorder, as it will always install the most recent stable release.
+This is the preferred method to install OSC-recorder.
+It will always install the most recent stable release.
 
 If you don't have `pip`_ installed, this `Python installation guide`_ can guide
 you through the process.
@@ -45,6 +46,12 @@ Once you have a copy of the source, you can install it with:
 .. code-block:: console
 
     $ python setup.py install
+
+For virtual environments, better to use:
+
+.. code-block:: console
+
+    $ pip install .
 
 
 .. _Github repo: https://github.com/oishefarhan/osc_recorder

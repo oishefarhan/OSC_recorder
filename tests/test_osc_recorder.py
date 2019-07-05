@@ -3,20 +3,28 @@
 
 """Tests for `osc_recorder` package."""
 
+# import pytest
 
-import unittest
+from osc_recorder import TimeSeriesBundle
 
-from osc_recorder import osc_recorder
+def test_time_series_bundle_format(ts_bundle):
+    """Testing TimeSeriesBundle is in the correct format."""
+    assert isinstance(ts_bundle, TimeSeriesBundle)
+    for name, info in ts_bundle.bundle.items():
+        assert isinstance(name, str)
+        assert isinstance(info, dict)
+        assert isinstance(info['timestamps'], list)
+        assert isinstance(info['samples'], list)
 
 
-class TestOsc_recorder(unittest.TestCase):
-    """Tests for `osc_recorder` package."""
+def test_bundle_to_timestamped_dict(ts_bundle):
+    """Testing TimeSeriesBundle conversion to timestampled_dict"""
+    ts_dict = ts_bundle.to_timestamped_dict()
 
-    def setUp(self):
-        """Set up test fixtures, if any."""
-
-    def tearDown(self):
-        """Tear down test fixtures, if any."""
-
-    def test_000_something(self):
-        """Test something."""
+    for name, info in ts_bundle.bundle.items():
+        timestamps = info['timestamps']
+        samples = info['samples']
+        for i, timestamp in enumerate(timestamps):
+            sample = samples[i]
+            assert timestamp in ts_dict
+            assert [name, sample] in ts_dict[timestamp]

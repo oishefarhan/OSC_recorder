@@ -1,5 +1,5 @@
 Welcome to OSC-recorder's documentation!
-======================================
+========================================
 
 .. toctree::
    :maxdepth: 2

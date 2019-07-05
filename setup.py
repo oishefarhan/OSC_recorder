@@ -3,6 +3,12 @@
 
 """The setup script."""
 
+import os
+import sys
+
+from distutils.command.build_scripts import build_scripts
+from distutils import util, log
+
 from setuptools import setup, find_packages
 
 with open('README.rst') as readme_file:
@@ -11,11 +17,28 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [ ]
+requirements = []
 
-setup_requirements = [ ]
+setup_requirements = []
 
-test_requirements = [ ]
+test_requirements = ['pytest>=3.5.0']
+
+class build_scripts_rename(build_scripts):
+    def copy_scripts(self):
+        build_scripts.copy_scripts(self)
+        # remove the .py extension from scripts
+        for s in self.scripts:
+            f = util.convert_path(s)
+            before = os.path.join(self.build_dir, os.path.basename(f))
+            after = os.path.splitext(before)[0]
+            log.info("renaming %s -> %s" % (before, after))
+            os.rename(before, after)
+
+
+cmdclass = {
+    'build_scripts': build_scripts_rename,
+}
+
 
 setup(
     author="Oishe Farhan",
@@ -41,6 +64,8 @@ setup(
     keywords='osc_recorder',
     name='osc_recorder',
     packages=find_packages(include=['osc_recorder']),
+    scripts=['scripts/capture_osc.py', 'scripts/replay_osc.py'],
+    cmdclass=cmdclass,
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
