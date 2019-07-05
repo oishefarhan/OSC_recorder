@@ -41,17 +41,18 @@ Or download the `tarball`_:
 
     $ curl  -OL https://github.com/oishefarhan/osc_recorder/tarball/master
 
-Once you have a copy of the source, you can install it with:
+Once you have a copy of the source, you can install to virtualenv via:
+
+.. code-block:: console
+
+    $ pip install .
+
+You can also install like below:
 
 .. code-block:: console
 
     $ python setup.py install
 
-For virtual environments, better to use:
-
-.. code-block:: console
-
-    $ pip install .
 
 
 .. _Github repo: https://github.com/oishefarhan/osc_recorder

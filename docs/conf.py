@@ -25,7 +25,7 @@ sys.path.insert(0, os.path.abspath('..'))
 # import osc_recorder
 __author__ = """Oishe Farhan"""
 __email__ = 'oishe.farhan@interaxon.ca'
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
 # -- General configuration ---------------------------------------------
 
