@@ -1,6 +1,5 @@
 Cython==0.29.11
 numpy==1.16.4
-pyliblo==0.10.0
 pip==18.1
 bumpversion==0.5.3
 wheel==0.32.1

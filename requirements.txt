@@ -1,3 +1,0 @@
-Cython==0.29.11
-numpy==1.16.4
-pyliblo==0.10.0

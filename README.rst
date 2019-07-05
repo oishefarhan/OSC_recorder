@@ -28,7 +28,7 @@ Installation
 
 If you want to install from source.
 
-Clone the repo and run `pip install .` from the folder.
+Clone the repo and run :code:`pip install .` from the folder.
 
 
 .. _liblo: http://liblo.sourceforge.net/

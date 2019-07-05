@@ -40,7 +40,6 @@ class CaptureOSCServer(liblo.ServerThread):
             log.setLevel(logging.INFO)
         log.info("Server started on port %d", port)
         self.collector = Collector()
-        self.start_time = None
         self.first_message_captured = False
 
     @liblo.make_method(None, None)
@@ -56,9 +55,7 @@ class CaptureOSCServer(liblo.ServerThread):
         log.debug("%s, %s", path, str(args))
         if not self.first_message_captured:
             self.first_message_captured = True
-            self.start_time = time.time()
-        timestamp = time.time() - self.start_time
-        self.collector.collect_samples(path, timestamp, args)
+        self.collector.collect_samples(path, liblo.time(), args)
 
     def get_time_series(self):
         """Converts captured OSC messages to time series bundle format.
