@@ -21,6 +21,8 @@ Documentation: https://osc-recorder.readthedocs.io.
 Installation
 ------------
 * Download and install liblo_ first
+  * For Mac OSX :code:`brew install liblo`
+* Install cython: :code:`pip install cython`
 * Install pyliblo: :code:`pip install pyliblo`
 * If it doesn't work, follow instructions here: pyliblo_
 

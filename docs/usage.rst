@@ -2,6 +2,8 @@
 Usage
 =====
 
+These scripts should be available as terminal commands without the .py extension.
+
 --------------
 capture_osc.py
 --------------
@@ -48,6 +50,8 @@ usage: osc_to_csv.py [-h] FILENAME [-f FOLDER]
 Convert an osc file to multiple csv files.
 File names for csv are the path names.
 The first column is the corresponding timestamp.
+
+With liblo installed, osc files can be captured with :code:`oscdump [PORT] > [filename]`
 
 arguements:
   FILEPATH              osc file path
