@@ -1,5 +1,4 @@
 Cython==0.29.11
-pyliblo==0.10.0
 numpy==1.16.4
 pip==18.1
 bumpversion==0.5.3
