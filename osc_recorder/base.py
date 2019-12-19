@@ -1,12 +1,11 @@
 """Base data class to store messaged from OSC paths."""
 import json
-import numpy as np
 from collections import defaultdict
+import numpy as np
 
 
 class TimeSeriesBundle():
-    """ Bundles together different path identified time series.
-
+    """Bundles together different path identified time series.
     The bundle is a dictionary with the path names as the key.
     The values in the bundle are also dictionaries.
     They contain the timestamps and samples which are stored in lists.

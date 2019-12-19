@@ -39,3 +39,19 @@ optional arguments:
   -d, --debug           Print values being replayed.
   -t, --time-bundle     Sends using timestamped bundle format.
 
+
+--------------
+osc_to_csv.py
+--------------
+usage: osc_to_csv.py [-h] FILENAME [-f FOLDER]
+
+Convert an osc file to multiple csv files.
+File names for csv are the path names.
+The first column is the corresponding timestamp.
+
+arguements:
+  FILEPATH              osc file path
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f FOLDER, --folder   folder to save all csv into

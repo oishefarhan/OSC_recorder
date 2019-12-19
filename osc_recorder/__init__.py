@@ -3,7 +3,7 @@
 """Top-level package for OSC-recorder."""
 
 
-__version__ = '0.1.2'
+__version__ = '0.1.3'
 
 from .base import TimeSeriesBundle
 from .collector import Collector
