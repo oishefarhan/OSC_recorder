@@ -1,5 +1,6 @@
 """Base data class to store messaged from OSC paths."""
 import json
+import numpy as np
 from collections import defaultdict
 
 
@@ -37,6 +38,10 @@ class TimeSeriesBundle():
             timestamps (float): Timestamp saved when packet is received.
             samples (list): List of values received.
         """
+        if isinstance(timestamps, np.ndarray):
+            timestamps = timestamps.tolist()
+        if isinstance(samples, np.ndarray):
+            samples = samples.tolist()
         self.bundle[name] = {
             'timestamps': timestamps,
             'samples': samples
