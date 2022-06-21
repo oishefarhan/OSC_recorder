@@ -1,5 +1,5 @@
 Cython==0.29.11
-numpy==1.16.4
+numpy==1.22.0
 pip==18.1
 bumpversion==0.5.3
 wheel==0.32.1
